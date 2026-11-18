@@ -1,3 +1,14 @@
+# chat-demo-qq2005
+
+把 DeepSeek 官方 [chat-demo](https://github.com/deepseek-ai/chat-demo) 换成 2005 年 QQ 的样子：
+竖排头像栏、好友列表式会话、经典蓝白配色、细边框与小像素图标，附一个 Electron 桌面壳。
+
+- **保留原有能力**：模型对话、API Key 设置、历史会话导入导出
+- **新增**：src/app/qq-retro.css 主题、components/rail/ 头像栏、services/friends.ts 好友列表、desktop/（Electron 壳）、	ools/installer（安装包）
+- **许可**：沿用 MIT，原作者版权声明保留
+
+---
+
 # chat-demo
 
 English | [简体中文](README.zh-CN.md)
