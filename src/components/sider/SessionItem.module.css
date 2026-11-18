@@ -1,0 +1,151 @@
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-sizing: border-box;
+  min-height: 44px;
+  padding: 3px 5px;
+  border-radius: 0;
+  border: 1px solid transparent;
+  font-size: 12px;
+  line-height: 18px;
+  color: #1b2b3d;
+  cursor: pointer;
+  user-select: none;
+
+  [data-ds-dark-theme] & {
+    color: #e8eef6;
+  }
+
+  &.active {
+    border-color: var(--qq-blue-dark);
+    background: linear-gradient(180deg, var(--qq-blue-light) 0%, var(--qq-blue) 100%);
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  @media (hover: hover) {
+    &:not(.active):hover {
+      border-color: #a9c4e2;
+      background: #dcebfb;
+    }
+
+    [data-ds-dark-theme] &:not(.active):hover {
+      border-color: #4c5867;
+      background: #333f4d;
+    }
+
+    &:hover,
+    &.active {
+      .action {
+        display: flex;
+      }
+
+      .time {
+        display: none;
+      }
+    }
+  }
+}
+
+.time {
+  flex-shrink: 0;
+  margin-left: 4px;
+  font-size: 11px;
+  line-height: 16px;
+  color: #7c8b9d;
+}
+
+.item.active .time {
+  color: #dceaff;
+}
+
+.avatarWrap {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.onlineDot {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #1f7a1f;
+  background: #3ec13e;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 1px;
+}
+
+.title {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.signature {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 11px;
+  line-height: 15px;
+  color: #7c8b9d;
+}
+
+.item.active .signature {
+  color: #dceaff;
+}
+
+.action {
+  display: none;
+  flex-shrink: 0;
+  margin-left: 2px;
+}
+
+.renameInput {
+  box-sizing: border-box;
+  width: 100%;
+  height: 24px;
+  padding: 0 4px;
+  border: 2px solid;
+  border-color: var(--xp-shadow) var(--xp-white) var(--xp-white) var(--xp-shadow);
+  border-radius: 0;
+  background: var(--xp-white);
+  color: #1b2b3d;
+  font: inherit;
+  font-size: 12px;
+  outline: none;
+}
+
+@media (hover: none) {
+  .action {
+    display: flex;
+  }
+}
+
+@media not all and (min-width: 768px) {
+  .item {
+    min-height: 52px;
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+
+  .title {
+    line-height: 20px;
+  }
+
+  .renameInput {
+    height: 32px;
+    font-size: 14px;
+  }
+}

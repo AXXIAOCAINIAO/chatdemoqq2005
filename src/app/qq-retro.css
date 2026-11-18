@@ -1,0 +1,120 @@
+/* 2000 年网吧风：Windows 98/XP 灰面 + QQ2005 蓝，宋体、立体按钮、直角边框 */
+body {
+  --xp-face: #d4d0c8;
+  --xp-face-light: #e8e5df;
+  --xp-white: #ffffff;
+  --xp-shadow: #808080;
+  --xp-dark: #404040;
+  --xp-title-1: #0058e6;
+  --xp-title-2: #3a93ff;
+  --xp-title-3: #0b62d8;
+  --qq-blue: #0a5fbe;
+  --qq-blue-light: #4b8ede;
+  --qq-blue-dark: #04387a;
+  --qq-panel: #dbe7f7;
+  --qq-panel-dark: #b9cfe9;
+  --qq-chat-bg: #eef3f9;
+  --qq-chat-header: #d8e6f8;
+  --qq-border: #9eb2cc;
+  --qq-bubble-other: #ffffff;
+  --qq-bubble-me: #d6e8fb;
+  --qq-shadow-sm: 0 0 0 transparent;
+  --qq-shadow-md: 0 0 0 transparent;
+
+  /* 覆盖 DeepSeek 设计令牌，让弹窗、菜单、按钮都跟着变灰面 */
+  --dsw-font-family: 'SimSun', '宋体', Tahoma, 'MS Sans Serif', 'Microsoft YaHei', sans-serif;
+  --dsw-static-neutral-bluish-00: #ffffff;
+  --dsw-alias-bg-base: #ffffff;
+  --dsw-alias-brand-primary: var(--qq-blue);
+  --dsw-alias-brand-primary-invert: var(--qq-blue);
+  --dsw-alias-brand-text: var(--qq-blue);
+  --dsw-alias-button-primary-fill: #1c6fd0;
+  --dsw-alias-button-primary-hover: #155bb0;
+  --dsw-alias-button-contrast-fill: #4a4a4a;
+  --dsw-alias-border-l1: #b5bfcd;
+  --dsw-alias-border-l2: #9aa8ba;
+  --dsw-alias-border-l3: #8a97a8;
+  --dsw-alias-interactive-bg-hover: #cfe0f5;
+  --dsw-specific-sidebar-fill: var(--qq-panel);
+  --dsw-specific-sidebar-nav-item-active-accent: var(--qq-blue);
+  --dsw-specific-sidebar-nav-item-hover: #c6dbf3;
+  --dsw-specific-input-major: #ffffff;
+}
+
+body[data-ds-dark-theme] {
+  --xp-face: #4a4a4a;
+  --xp-face-light: #5a5a5a;
+  --xp-white: #cfcfcf;
+  --xp-shadow: #202020;
+  --xp-dark: #101010;
+  --qq-blue: #2f7fd0;
+  --qq-blue-light: #5a9ad8;
+  --qq-blue-dark: #0b2d55;
+  --qq-panel: #2b3540;
+  --qq-panel-dark: #1f262e;
+  --qq-chat-bg: #262b33;
+  --qq-chat-header: #33404e;
+  --qq-border: #4c5867;
+  --qq-bubble-other: #333b45;
+  --qq-bubble-me: #2c4257;
+  --dsw-alias-bg-base: #262b33;
+  --dsw-alias-border-l1: #3d4753;
+  --dsw-alias-border-l2: #4c5867;
+  --dsw-alias-border-l3: #5c6a7a;
+  --dsw-alias-interactive-bg-hover: #3a4757;
+  --dsw-alias-label-primary: #e8eef6;
+  --dsw-alias-label-secondary: #c2cddb;
+  --dsw-alias-label-tertiary: #9fadbe;
+  --dsw-alias-label-caption: #8b99a9;
+}
+
+/* 复古滚动条：立体灰槽 + 方块滑块 */
+* {
+  scrollbar-color: #c0c8d4 #e8eaee;
+}
+
+*::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #e8eaee;
+  border-left: 1px solid #b5bfcd;
+}
+
+*::-webkit-scrollbar-thumb {
+  box-sizing: border-box;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  background: #d4d0c8;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #e2ded6;
+}
+
+/* 闪烁标语（老主页那种） */
+@keyframes retro-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0.15;
+  }
+}
+
+/* 跑马灯式左右摇摆 */
+@keyframes retro-sway {
+  0%,
+  100% {
+    transform: translateX(-4px);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+}

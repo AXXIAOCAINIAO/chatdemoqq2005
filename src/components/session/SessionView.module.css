@@ -1,0 +1,114 @@
+.view {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--qq-chat-bg);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  gap: 8px;
+  box-sizing: border-box;
+  height: 26px;
+  padding: 0 3px 0 6px;
+  border-bottom: 1px solid var(--qq-blue-dark);
+  background: linear-gradient(
+    180deg,
+    var(--xp-title-2) 0%,
+    var(--xp-title-1) 12%,
+    var(--xp-title-1) 88%,
+    var(--xp-title-3) 100%
+  );
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.35);
+  user-select: none;
+}
+
+.headerMain {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.title {
+  max-width: 480px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.windowButtons {
+  display: flex;
+  flex-shrink: 0;
+  gap: 2px;
+}
+
+.winBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 14px;
+  border: 1px solid var(--xp-white);
+  background: linear-gradient(180deg, #8cc0f7 0%, #2b74d0 100%);
+  font-size: 9px;
+  line-height: 1;
+  color: #fff;
+  font-weight: 400;
+}
+
+.withCollapsedSider {
+  margin-left: 113px;
+}
+
+.inputContainer {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: calc(var(--message-list-max-width) - 64px);
+  max-width: calc(100% - 32px);
+  margin: auto auto 0;
+  padding-top: 6px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 20%,
+    var(--qq-chat-bg) 20%,
+    var(--qq-chat-bg) 100%
+  );
+}
+
+.caveat {
+  width: 100%;
+  padding: 4px 0 6px;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+  color: #7c8b9d;
+  user-select: none;
+}
+
+@media not all and (min-width: 768px) {
+  .inputContainer {
+    position: relative;
+    bottom: auto;
+    flex-shrink: 0;
+    margin: 0 auto;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

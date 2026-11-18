@@ -1,0 +1,9 @@
+{
+  "name": "qq2005-chat",
+  "productName": "QQ2005Chat",
+  "version": "1.0.0",
+  "description": "QQ2005 珊瑚版 · 复古聊天室桌面版",
+  "main": "main.js",
+  "author": "retro desk",
+  "license": "MIT"
+}
